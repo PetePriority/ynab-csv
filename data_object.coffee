@@ -17,6 +17,11 @@ numberfy = (val) ->
   else
     val
 
+remove_commata = (text) ->
+  if !text?
+    text = ''
+  text = text.replace(/,/g, ".")
+  text
 
 # This class does all the heavy lifting.
 # It takes the and can format it into csv
@@ -66,7 +71,7 @@ class window.DataObject
                   tmp_row[col] = number if number > 0
                 else
                   tmp_row[col] = number
-              else tmp_row[col] = cell
+              else tmp_row[col] = remove_commata(cell)
 
           value.push(tmp_row)
     value
