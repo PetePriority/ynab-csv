@@ -50,7 +50,7 @@
                 <thead>
                   <tr>
                     <th ng-repeat='col in ynab_cols'>
-                      {{col}}<br/>
+                      {{col}} - {{ynab_map[col]}}<br/>
                       <select ng-model="ynab_map[col]" ng-options="f for f in data_object.fields()"></select>
                     </th>
                   </tr>
