@@ -61,12 +61,12 @@ angular.element(document).ready ->
     $scope.ynab_cols = ['Date','Payee','Category','Memo','Outflow','Inflow']
     $scope.data = {}
     $scope.ynab_map =
-      Date:     'Date'
-      Payee:    'Payee'
-      Category: 'Category'
-      Memo:     'Memo'
-      Outflow:  'Amount'
-      Inflow:   'Amount'
+      Date:     'Valuta'
+      Payee:    'Sender / Empfänger'
+      Category: 'Kategorie'
+      Memo:     'Verwendungszweck'
+      Outflow:  'Betrag in EUR'
+      Inflow:   'Betrag in EUR'
     $scope.data_object = new DataObject()
 
     $scope.$watch 'data.source', (newValue, oldValue) ->
